@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <title>Sandy Mosqueda – Digital Director</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font: DM Serif Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -76,29 +82,31 @@
 
     .name-inner {
       transform: rotate(-18deg);
-      white-space: nowrap;
+      text-align: left;
+    }
+
+    .first-name,
+    .last-name {
+      font-family: "DM Serif Display", serif;
+      display: block;
+      letter-spacing: 0.02em;
     }
 
     .first-name {
-      font-family: "Times New Roman", "Georgia", serif;
-      font-size: clamp(90px, 21vw, 210px);
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      display: inline-block;
+      font-size: clamp(110px, 22vw, 230px);
+      line-height: 0.85;
     }
 
     .last-name {
-      font-family: "Times New Roman", "Georgia", serif;
-      font-size: clamp(32px, 5.5vw, 52px);
-      display: inline-block;
-      margin-left: 18px;
-      vertical-align: middle;
+      font-size: clamp(40px, 6vw, 60px);
+      margin-top: 10px;
+      margin-left: 14px; /* slight indent so it tucks under Sandy */
     }
 
     .role {
       position: absolute;
-      bottom: 24px;
-      right: 24px;
+      bottom: 56px; /* moved up a bit */
+      right: 32px;
       z-index: 1;
       font-size: 18px;
     }
@@ -114,8 +122,8 @@
         font-size: 16px;
       }
       .role {
-        bottom: 16px;
-        right: 16px;
+        bottom: 32px;
+        right: 20px;
         font-size: 16px;
       }
     }
@@ -125,7 +133,7 @@
   <div class="hero">
     <nav>
       <a href="index.html">home</a>
-      <!-- temp: opens email instead of 404 page -->
+      <!-- change this to your real email when you're ready -->
       <a href="mailto:youremail@example.com">contact</a>
     </nav>
 
@@ -146,7 +154,6 @@
     const grid = document.getElementById('dot-grid');
     const hero = document.querySelector('.hero');
 
-    // a bit denser grid
     const cols = 26;
     const rows = 14;
     const dots = [];
