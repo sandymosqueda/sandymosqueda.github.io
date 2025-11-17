@@ -10,17 +10,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 
+  <!-- Glacial Indifference -->
+  <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
     }
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden; /* no scrolling */
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      font-family: 'Glacial Indifference', system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     }
+
     body {
       background: #f8d648; /* yellow */
     }
@@ -51,17 +56,21 @@
       transition: transform 0.08s ease-out;
     }
 
+    /* Nav */
     nav {
       position: absolute;
       top: 24px;
       left: 24px;
-      z-index: 1;
-      font-size: 18px;
+      z-index: 2;
+      font-family: 'Glacial Indifference', sans-serif;
+      font-size: 20px;
       line-height: 1.6;
     }
 
     nav a {
-      display: block;
+      display: inline-block;
+      padding: 4px 8px;
+      background: #f8d648;
       text-decoration: none;
       color: #000;
     }
@@ -70,6 +79,7 @@
       text-decoration: underline;
     }
 
+    /* Name block */
     .name-wrap {
       position: absolute;
       inset: 0;
@@ -82,14 +92,15 @@
 
     .name-inner {
       transform: rotate(-18deg);
-      text-align: left;
+      text-align: center; /* center stacked text */
     }
 
     .first-name,
     .last-name {
       font-family: "DM Serif Display", serif;
-      display: block;
       letter-spacing: 0.02em;
+      width: 100%;
+      display: block;
     }
 
     .first-name {
@@ -99,16 +110,22 @@
 
     .last-name {
       font-size: clamp(40px, 6vw, 60px);
-      margin-top: 10px;
-      margin-left: 14px; /* slight indent so it tucks under Sandy */
+      margin-top: 18px; /* space for visual balance */
+      padding: 6px 14px;
+      background: #f8d648; /* same yellow as page */
+      display: inline-block;
     }
 
+    /* Role label */
     .role {
       position: absolute;
       bottom: 56px; /* moved up a bit */
       right: 32px;
-      z-index: 1;
-      font-size: 18px;
+      z-index: 2;
+      font-family: 'Glacial Indifference', sans-serif;
+      font-size: 20px;
+      background: #f8d648;
+      padding: 4px 8px;
     }
 
     .role::before {
@@ -121,6 +138,7 @@
         left: 16px;
         font-size: 16px;
       }
+
       .role {
         bottom: 32px;
         right: 20px;
